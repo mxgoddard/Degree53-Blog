@@ -1,5 +1,5 @@
-﻿using Degree53_BlogTechTest.Interfaces;
-using Degree53_BlogTechTest.Models;
+﻿using Degree53_BlogTechTest.Data.Interfaces;
+using Degree53_BlogTechTest.Data.Models;
 using Degree53_BlogTechTest.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

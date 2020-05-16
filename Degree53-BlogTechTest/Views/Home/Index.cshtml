@@ -4,8 +4,9 @@
     @{
         foreach (var article in Model.Articles)
         {
-            <div>
+            <div class="ShowcaseArticleDiv">
                 <h4>@article.Title</h4>
+                <p>Posted by @article.OwnerUsername at @article.DateTimePosted.ToString()</p>
             </div>
         }
     }

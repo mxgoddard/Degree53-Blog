@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace Degree53_BlogTechTest.Models
 {
-    public class ExampleModel
+    public class ArticleModel
     {
         public int Id { get; set; }
+
+        public string Title { get; set; }
     }
 }

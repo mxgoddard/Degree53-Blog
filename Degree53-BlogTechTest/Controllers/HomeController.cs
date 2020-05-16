@@ -1,5 +1,6 @@
 ﻿using Degree53_BlogTechTest.Interfaces;
 using Degree53_BlogTechTest.Models;
+using Degree53_BlogTechTest.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -27,8 +28,11 @@ namespace Degree53_BlogTechTest.Controllers
 
         public ViewResult ListArticles()
         {
-            var articles = _blogRepo.Articles;
-            return View(articles);
+            ArticleListViewModel vm = new ArticleListViewModel();
+            vm.Articles = _blogRepo.Articles;
+            vm.word = "Hello, World!";
+
+            return View(vm);
         }
 
         public IActionResult Add()

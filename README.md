@@ -17,3 +17,7 @@ Create a .NET Core C# solution for a simple blog.
 * The submitted application must be the complete solution, with database, and not a compiled version of the site.
 * Please provide instructions, if you feel they’re necessary
 * Use your initiative wherever possible, and have fun with it.
+
+### Database
+
+Database name is 'db_degree53-blog'. Ordinarily the appsettings.json would be on the .gitignore file or the connection strings hidden.

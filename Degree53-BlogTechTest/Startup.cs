@@ -1,5 +1,6 @@
 using Degree53_BlogTechTest.Data;
 using Degree53_BlogTechTest.Data.Interfaces;
+using Degree53_BlogTechTest.Data.Models;
 using Degree53_BlogTechTest.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,12 +27,12 @@ namespace Degree53_BlogTechTest
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IBlogRepository, BlogRepository>();
-            services.AddControllersWithViews();
-
             // Database configuration
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("MvcBlogContext")));
+                options.UseSqlServer(_configurationRoot.GetConnectionString("MvcBlogContext")));
+
+            services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

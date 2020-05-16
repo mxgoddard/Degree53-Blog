@@ -8,18 +8,18 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <div class="text-center">
-                    <h1 class="display-4">Bloggr</h1>
+        <nav class="border-bottom box-shadow">
+            <div class="HeaderDiv">
+                <div class="border-bottom box-shadow TitleDiv">
+                    <h1>Bloggr</h1>
                 </div>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="NavBarDiv">
                     <ul>
                         <li>
-                            <a asp-area="" asp-controller="Home" asp-action="ListArticles">Home</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Add">Create Article</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Add">Write</a>
                         </li>
                         <li>
                             <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -29,13 +29,13 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer">
         <div>
             Degree 53 Blog Tech Test - Written by Max Goddard - 16/5/2020
         </div>

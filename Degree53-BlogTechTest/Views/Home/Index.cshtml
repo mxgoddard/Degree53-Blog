@@ -1,11 +1,12 @@
-﻿<div class="text-center">
-    <h1 class="display-4">Bloggr</h1>
-    <div>
-        <ul>
-            @for (int i = 0; i < 5; i++)
-            {
-                <li>List item @i</li>
-            }
-        </ul>
-    </div>
+﻿<div>
+    <h3>@Model.word</h3>
+
+    @{
+        foreach (var article in Model.Articles)
+        {
+            <div>
+                <h4>@article.Title</h4>
+            </div>
+        }
+    }
 </div>

@@ -21,18 +21,18 @@ namespace Degree53_BlogTechTest.Controllers
             _blogRepo = blogRepo;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public ViewResult ListArticles()
+        public ViewResult Index()
         {
             ArticleListViewModel vm = new ArticleListViewModel();
             vm.Articles = _blogRepo.Articles;
             vm.word = "Hello, World!";
 
             return View(vm);
+        }
+
+        public ViewResult ListArticles()
+        {
+            return View();
         }
 
         public IActionResult Add()

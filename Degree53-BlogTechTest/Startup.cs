@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Degree53_BlogTechTest.Data.Interfaces;
-using Degree53_BlogTechTest.Data.Mocks;
+using Degree53_BlogTechTest.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +20,7 @@ namespace Degree53_BlogTechTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IBlogRepository, MockBlogRepository>();
+            services.AddTransient<IBlogRepository, BlogRepository>();
             services.AddControllersWithViews();
         }
 

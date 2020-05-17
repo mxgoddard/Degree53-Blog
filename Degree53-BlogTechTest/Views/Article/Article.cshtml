@@ -7,7 +7,7 @@
             <p id="ArticleTitle">@Model.Title</p>
             <p>@Model.Content</p>
 
-            <form asp-controller="Home" asp-action="DeleteArticle" method="delete">
+            <form asp-controller="Article" asp-action="DeleteArticle" method="delete">
                 <input type="submit" class="BlueBtn NoMarginButton" value="Delete Article">
             </form>
         </div>

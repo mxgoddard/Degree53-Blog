@@ -30,29 +30,6 @@ namespace Degree53_BlogTechTest.Controllers
             return View(vm);
         }
 
-        public ActionResult Add()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Add(ArticleModel article)
-        {
-            if (ModelState.IsValid)
-            {
-                if (String.IsNullOrWhiteSpace(article.OwnerUsername))
-                {
-                    article.OwnerUsername = "Anonymous";
-                }
-
-                this._blogRepo.CreateArticle(article);
-
-                return Redirect($"/Article/Article/{article.Id}");
-            }
-
-            return View(article);
-        }
-
         public ViewResult Settings()
         {
             UserModel user = _blogRepo.GetUser();
@@ -68,12 +45,6 @@ namespace Degree53_BlogTechTest.Controllers
             this._blogRepo.UpdateSettings(user);
 
             return Redirect($"/Home/Settings");
-        }
-
-        [HttpDelete]
-        public IActionResult DeleteArticle()
-        {
-            return Redirect($"");
         }
     }
 }

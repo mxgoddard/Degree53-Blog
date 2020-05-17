@@ -1,4 +1,5 @@
-﻿using Degree53_BlogTechTest.Data.Interfaces;
+﻿using System;
+using Degree53_BlogTechTest.Data.Interfaces;
 using Degree53_BlogTechTest.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -23,6 +24,35 @@ namespace Degree53_BlogTechTest.Controllers
             ArticleModel article = _blogRepo.GetArticle(id);
 
             return View(article);
+        }
+
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(ArticleModel article)
+        {
+            if (ModelState.IsValid)
+            {
+                if (String.IsNullOrWhiteSpace(article.OwnerUsername))
+                {
+                    article.OwnerUsername = "Anonymous";
+                }
+
+                this._blogRepo.CreateArticle(article);
+
+                return Redirect($"/Article/Article/{article.Id}");
+            }
+
+            return View(article);
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteArticle()
+        {
+            return Redirect($"");
         }
     }
 }

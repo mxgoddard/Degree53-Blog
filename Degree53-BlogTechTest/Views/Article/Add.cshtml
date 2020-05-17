@@ -3,9 +3,9 @@
 <div class="GeneralWrapper">
     <div class="GeneralFocusArea">
         <h2 id="CreateArticleTitle">Create Article</h2>
-        <form asp-controller="Home" asp-action="Add" method="post">
+        <form asp-controller="Article" asp-action="Add" method="post">
             <input type="text" asp-for="Title" class="CreateArticleTextInput CreateArticleTextInputTitle" placeholder="What's the title of your blog?">
-            <textarea asp-for="Content" class="CreateArticleTextInput CreateArticleContent" placeholder="Write your blog here" class="CreateArticleTextInput"></textarea>
+            <textarea asp-for="Content" class="CreateArticleTextInput CreateArticleContent" placeholder="Write your blog here"></textarea>
             <input type="text" asp-for="OwnerUsername" class="CreateArticleTextInput" placeholder="What's your name? (optional)">
             <input type="submit" class="BlueBtn" value="Create Article">
         </form>

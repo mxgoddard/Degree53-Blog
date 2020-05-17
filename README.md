@@ -30,18 +30,16 @@ Create a .NET Core C# solution for a simple blog.
 * ~~Integrate Database (SQL Server Express LocalDB)~~
 * ~~Seed database on app start~~
 * ~~Read articles from database~~
+* Delete articles
 * Unit Tests
 * ~~Sticky footer~~
 * ~~Add settings page~~
 * ~~Form validation~~
-* Delete articles
 * ~~Clicking article takes to article page~~
 * ~~I'm an admin checkbox~~
 * ~~When article added route to the page for that article~~
 * ~~Split out CSS classes~~
 * ~~Web Design (CSS)~~
-* If no articles appear show something
-* Limit how many articles appear?
 * Try catches and add logging
 * Filter by time created
 * Split out controllers and repositories

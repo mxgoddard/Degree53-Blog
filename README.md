@@ -23,3 +23,28 @@ Create a .NET Core C# solution for a simple blog.
 * Database name is 'db_degree53-blog'.
 * Running the application seeds the database.
 * The Admin has an id of 1 in the User table however admin permissions will need to be enabled in the settings.
+
+### TODO
+
+* Setup basic app                                       [x]
+* Integrate Database (SQL Server Express LocalDB)       [x]
+* Seed database on app start                            [x]
+* Read articles from database                           [x]
+* Unit Tests                                            [ ]
+* Sticky footer                                         [x]
+* Add settings page                                     [x]
+* Form validation                                       [ ]
+* Delete articles                                       [ ]
+* Clicking article takes to article page                [x]
+* I'm an admin checkbox                                 [x]
+* When article added route to the page for that article [x]
+* Web Design (CSS)                                      [ ]
+* If no articles appear show something                  [ ]
+* Limit how many articles appear?                       [ ]
+* Try catches and add logging                           [ ]
+* Filter by time created                                [ ]
+* Split out controllers and repositories                [ ]
+* Seed automatically creates the db                     [ ]
+* Global exception handler                              [ ]
+* Conditional render Add button                         [ ]
+* Update favicon.ico                                    [ ]

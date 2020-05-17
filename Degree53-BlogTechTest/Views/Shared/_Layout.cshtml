@@ -17,22 +17,7 @@
                                 <h1>Bloggr</h1>
                             </a>
                         </div>
-                        <div class="NavBarDiv">
-                            <ul>
-                                <li>
-                                    <a asp-controller="Home" asp-action="Index">Home</a>
-                                </li>
-                                @if (Model.IsAdmin)
-                                {
-                                    <li>
-                                        <a asp-controller="Home" asp-action="Add">Add</a>
-                                    </li>
-                                }
-                                <li>
-                                    <a asp-controller="Home" asp-action="Settings">Settings</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <partial name="~/Views/Shared/NavBar.cshtml" />
                     </div>
                 </nav>
             </header>

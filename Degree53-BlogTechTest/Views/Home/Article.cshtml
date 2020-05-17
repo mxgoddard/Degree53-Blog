@@ -1,10 +1,11 @@
 ﻿@* This is the page for a specific article. *@
+@model Degree53_BlogTechTest.Data.Models.ArticleModel
 
 <div>
     @{
         <div>
-            <h4>This is an article title</h4>
-            <p>This could be some article content. Bla bla bla.</p>
+            <h4>@Model.Title</h4>
+            <p>@Model.Content</p>
         </div>
     }
 </div>

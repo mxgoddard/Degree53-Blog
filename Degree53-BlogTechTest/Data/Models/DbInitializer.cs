@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Degree53_BlogTechTest.Data.Models
 {
     public class DbInitializer
     {
+        // Seed database
         public static void Seed(AppDbContext context)
         {
-            // AppDbContext context = builder.ApplicationServices.GetRequiredService<AppDbContext>();
-
             context.Database.EnsureCreated();
 
             // If there aren't any articles in the db, create some stock ones.

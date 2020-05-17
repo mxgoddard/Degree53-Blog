@@ -29,10 +29,13 @@ namespace Degree53_BlogTechTest.Controllers
             return View(vm);
         }
 
-        public ViewResult Article()
+        // Show a specific article referenced by the article id
+        public ViewResult Article(int id)
         {
-            // Create ViewModel for individual article
-            return View();
+            // Validation needed here that id is valid
+            ArticleModel article = _blogRepo.GetArticle(id);
+
+            return View(article);
         }
 
         public ViewResult ListArticles()
@@ -51,16 +54,7 @@ namespace Degree53_BlogTechTest.Controllers
             _logger.LogInformation($"{article.Title}, {article.Content}.");
             this._blogRepo.CreateArticle(article);
 
-            // await this._blogRepo.CreateArticle(article);
-
-            // if (!ModelState.IsValid) return View(article);
-
             return View(article);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
     }
 }

@@ -49,10 +49,21 @@
 .TitleDiv {
     text-align: center;
     padding-top: 5px;
+    font-size: 20px;
+}
+
+.TitleDiv a {
+    text-decoration: none;
+    color: black;
 }
 
 .ShowcaseArticleDiv {
     border: 1px solid;
     padding: 10px;
     margin: 10px;
+}
+
+.LinkToArticleDiv a {
+    text-decoration: none;
+    color: black;
 }

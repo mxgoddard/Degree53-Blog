@@ -23,8 +23,11 @@ namespace Degree53_BlogTechTest.Controllers
         // Display all articles on the homepage
         public ViewResult Index()
         {
-            ArticleListViewModel vm = new ArticleListViewModel();
-            vm.Articles = _blogRepo.Articles;
+            ArticleListViewModel vm = new ArticleListViewModel()
+            {
+                Articles = _blogRepo.Articles,
+                IsAdmin = _blogRepo.GetUser().IsAdmin
+            };
 
             return View(vm);
         }

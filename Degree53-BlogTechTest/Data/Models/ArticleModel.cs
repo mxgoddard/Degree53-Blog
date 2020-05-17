@@ -1,4 +1,5 @@
 ﻿using System;
+using Degree53_BlogTechTest.ViewModels;
 
 namespace Degree53_BlogTechTest.Data.Models
 {

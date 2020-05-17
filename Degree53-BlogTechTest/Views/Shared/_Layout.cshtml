@@ -22,7 +22,7 @@
                                 <li>
                                     <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
-                                @if (false)
+                                @if (Model.IsAdmin)
                                 {
                                     <li>
                                         <a asp-controller="Home" asp-action="Add">Add</a>

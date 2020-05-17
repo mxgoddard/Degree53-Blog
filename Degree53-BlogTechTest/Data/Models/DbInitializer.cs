@@ -16,12 +16,12 @@ namespace Degree53_BlogTechTest.Data.Models
             {
                 using (var transaction = context.Database.BeginTransaction())
                 {
-                    context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] ON");
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[User] ON");
 
                     context.Add(new UserModel() { Id = 1, IsAdmin = false });
                     context.SaveChanges();
 
-                    context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] OFF");
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[User] OFF");
 
                     transaction.Commit();
                 }

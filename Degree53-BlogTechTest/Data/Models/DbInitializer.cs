@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Degree53_BlogTechTest.Data.Models
 {
@@ -9,6 +10,22 @@ namespace Degree53_BlogTechTest.Data.Models
         public static void Seed(AppDbContext context)
         {
             context.Database.EnsureCreated();
+
+            // Create the admin user with an id of 1 if it doesn't already exist
+            if (!context.User.Where(user => user.Id == 1).Any())
+            {
+                using (var transaction = context.Database.BeginTransaction())
+                {
+                    context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] ON");
+
+                    context.Add(new UserModel() { Id = 1, IsAdmin = false });
+                    context.SaveChanges();
+
+                    context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] OFF");
+
+                    transaction.Commit();
+                }
+            }
 
             // If there aren't any articles in the db, create some stock ones.
             if (!context.Articles.Any())

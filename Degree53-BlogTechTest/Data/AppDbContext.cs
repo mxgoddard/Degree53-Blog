@@ -14,5 +14,7 @@ namespace Degree53_BlogTechTest.Data
         }
 
         public DbSet<ArticleModel> Articles { get; set; }
+
+        public DbSet<UserModel> User { get; set; }
     }
 }

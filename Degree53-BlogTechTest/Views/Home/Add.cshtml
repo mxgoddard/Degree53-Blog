@@ -1,7 +1,7 @@
 ﻿@* Page for creating the article *@
 @model Degree53_BlogTechTest.Data.Models.ArticleModel
 <div>
-    <h1>Create Article</h1>
+    <h2>Create Article</h2>
     <form asp-controller="Home" asp-action="Add" method="post">
         <input type="text" asp-for="Title" placeholder="What's the title of your blog?" value="a">
         <br />
@@ -9,6 +9,6 @@
         <br />
         <input type="text" asp-for="OwnerUsername" placeholder="What's your name?" value="c">
         <br />
-        <input type="submit" value="Add">
+        <input type="submit" value="Create Article">
     </form>
 </div>

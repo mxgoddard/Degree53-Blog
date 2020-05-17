@@ -1,0 +1,13 @@
+﻿@* Settings page for enabling and disabling admin role. *@
+@model Degree53_BlogTechTest.Data.Models.UserModel
+
+<div class="SettingsPageDiv">
+    <h2>Settings</h2>
+
+    <form asp-controller="Home" asp-action="Settings" method="post">
+        <label>Enable Admin Role</label>
+        <input type="checkbox" asp-for="IsAdmin" value="true" checked="@(Model.IsAdmin)">
+        <br />
+        <input class="SettingsSaveBtn" type="submit" value="Save Changes" />
+    </form>
+</div>

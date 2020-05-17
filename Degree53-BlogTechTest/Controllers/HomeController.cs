@@ -57,10 +57,28 @@ namespace Degree53_BlogTechTest.Controllers
             return Redirect($"/Home/Article/{article.Id}");
         }
 
+        public ViewResult Settings()
+        {
+            UserModel user = _blogRepo.GetUser();
+            _logger.LogInformation($"{user.Id}, {user.IsAdmin}.");
+            return View(user);
+        }
+
+        [HttpPost]
+        public IActionResult Settings(UserModel user)
+        {
+            // Save settings to entity framework\
+            _logger.LogInformation($"Attempting to update settings for UserId: {user.Id} to an AdminRole: {user.IsAdmin}.");
+
+            this._blogRepo.UpdateSettings(user);
+
+            return Redirect($"/Home/Settings");
+        }
+
         [HttpDelete]
         public IActionResult DeleteArticle()
         {
-            return Redirect($"/Home");
+            return Redirect($"");
         }
     }
 }

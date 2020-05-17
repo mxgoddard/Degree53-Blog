@@ -10,5 +10,9 @@ namespace Degree53_BlogTechTest.Data.Interfaces
         public ArticleModel GetArticle(int articleId);
 
         public ArticleModel CreateArticle(ArticleModel article);
+
+        public void UpdateSettings(UserModel user);
+
+        public UserModel GetUser();
     }
 }

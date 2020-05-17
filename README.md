@@ -26,25 +26,25 @@ Create a .NET Core C# solution for a simple blog.
 
 ### TODO
 
-* ~~Setup basic app~~                                   [x]
-* Integrate Database (SQL Server Express LocalDB)       [x]
-* Seed database on app start                            [x]
-* Read articles from database                           [x]
-* Unit Tests                                            [ ]
-* Sticky footer                                         [x]
-* Add settings page                                     [x]
-* Form validation                                       [ ]
-* Delete articles                                       [ ]
-* Clicking article takes to article page                [x]
-* I'm an admin checkbox                                 [x]
-* When article added route to the page for that article [x]
-* Web Design (CSS)                                      [ ]
-* If no articles appear show something                  [ ]
-* Limit how many articles appear?                       [ ]
-* Try catches and add logging                           [ ]
-* Filter by time created                                [ ]
-* Split out controllers and repositories                [ ]
-* Seed automatically creates the db                     [ ]
-* Global exception handler                              [ ]
-* Conditional render Add button                         [ ]
-* Update favicon.ico                                    [ ]
+* ~~Setup basic app~~
+* ~~Integrate Database (SQL Server Express LocalDB)~~
+* ~~Seed database on app start~~
+* ~~Read articles from database~~
+* Unit Tests
+* ~~Sticky footer~~                               
+* ~~Add settings page~~                                 
+* Form validation                                   
+* Delete articles                                 
+* ~~Clicking article takes to article page~~         
+* ~~I'm an admin checkbox~~                             
+* ~~When article added route to the page for that article~~
+* Web Design (CSS)                                     
+* If no articles appear show something               
+* Limit how many articles appear?                    
+* Try catches and add logging                       
+* Filter by time created                            
+* Split out controllers and repositories            
+* Seed automatically creates the db                  
+* Global exception handler                          
+* Conditional render Add button                    
+* Update favicon.ico                                 

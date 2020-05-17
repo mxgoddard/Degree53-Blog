@@ -67,7 +67,6 @@ namespace Degree53_BlogTechTest.Controllers
         [HttpPost]
         public IActionResult Settings(UserModel user)
         {
-            // Save settings to entity framework\
             _logger.LogInformation($"Attempting to update settings for UserId: {user.Id} to an AdminRole: {user.IsAdmin}.");
 
             this._blogRepo.UpdateSettings(user);

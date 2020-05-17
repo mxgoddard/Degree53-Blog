@@ -20,13 +20,16 @@
                         <div class="NavBarDiv">
                             <ul>
                                 <li>
-                                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                    <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
+                                @if (false)
+                                {
+                                    <li>
+                                        <a asp-controller="Home" asp-action="Add">Add</a>
+                                    </li>
+                                }
                                 <li>
-                                    <a asp-area="" asp-controller="Home" asp-action="Add">Add</a>
-                                </li>
-                                <li>
-                                    <a asp-area="" asp-controller="Home" asp-action="Settings">Settings</a>
+                                    <a asp-controller="Home" asp-action="Settings">Settings</a>
                                 </li>
                             </ul>
                         </div>

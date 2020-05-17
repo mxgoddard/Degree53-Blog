@@ -5,7 +5,7 @@
         <div class="GeneralFocusArea SettingsPageDiv">
             <h2>Settings</h2>
 
-            <form asp-controller="Home" asp-action="Settings" method="post">
+            <form asp-controller="Settings" asp-action="Settings" method="post">
                 <label>Enable Admin Role</label>
                 <input type="checkbox" asp-for="IsAdmin" value="true" checked="@(Model.IsAdmin)">
                 <br />

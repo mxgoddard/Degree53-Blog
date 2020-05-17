@@ -40,9 +40,9 @@ Create a .NET Core C# solution for a simple blog.
 * ~~When article added route to the page for that article~~
 * ~~Split out CSS classes~~
 * ~~Web Design (CSS)~~
-* Try catches and add logging
+* ~~Error handling and logging~~
 * Filter by time created
-* Split out controllers and repositories
+* ~~Split out controllers and repositories~~
 * Seed automatically creates the db
 * Global exception handler
 * Conditional render Add button

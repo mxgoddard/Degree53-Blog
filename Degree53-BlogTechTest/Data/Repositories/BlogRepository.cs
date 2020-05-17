@@ -20,14 +20,24 @@ namespace Degree53_BlogTechTest.Data.Repositories
 
         public IEnumerable<ArticleModel> Articles => this._appDbContext.Articles;
 
-        public ArticleModel GetArticle(int articleId) => this._appDbContext.Articles.FirstOrDefault(a => a.Id == articleId);
+        public ArticleModel GetArticle(int articleId)
+        {
+            return this._appDbContext.Articles.FirstOrDefault(a => a.Id == articleId);
+        }
 
         public ArticleModel CreateArticle(ArticleModel article)
         {
             article.DateTimePosted = DateTime.UtcNow;
 
-            this._appDbContext.Articles.Add(article);
-            this._appDbContext.SaveChanges();
+            try
+            {
+                this._appDbContext.Articles.Add(article);
+                this._appDbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{DateTime.Now}: Unable to create article. Error: {ex.Message}");
+            }
 
             return article;
         }
@@ -47,7 +57,7 @@ namespace Degree53_BlogTechTest.Data.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message, ex);
+                _logger.LogError($"{DateTime.Now}: Unable to update admin permissions to ${user.IsAdmin}. UserId should be 1 (is '${user.Id}'). Error: {ex.Message}", ex);
             }
         }
 
@@ -59,7 +69,7 @@ namespace Degree53_BlogTechTest.Data.Repositories
             } 
             catch (Exception ex)
             {
-                _logger.LogError($"Unable to determine whether user is an admin. This could be because the database hasn't seeded correctly. Error: {ex.Message}");
+                _logger.LogError($"{DateTime.Now}: Unable to determine whether user is an admin. This could be because the database hasn't seeded correctly. Error: {ex.Message}");
                 return new UserModel { IsAdmin = false };
             }
         }

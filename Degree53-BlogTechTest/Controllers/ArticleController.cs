@@ -18,12 +18,19 @@ namespace Degree53_BlogTechTest.Controllers
         }
 
         // Show a specific article referenced by the article id
-        public ViewResult Article(int id)
+        public IActionResult Article(int id)
         {
             // Validation needed here that id is valid
-            ArticleModel article = _blogRepo.GetArticle(id);
-
-            return View(article);
+            try
+            {
+                ArticleModel article = _blogRepo.GetArticle(id);
+                return View(article);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{DateTime.Now}: Unable to retrieve data for article with an id of {id}. Error: {ex.Message}");
+                return Redirect($"/Home");
+            }
         }
 
         public ActionResult Add()

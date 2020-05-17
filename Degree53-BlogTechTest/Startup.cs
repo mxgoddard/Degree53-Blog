@@ -1,6 +1,5 @@
 using Degree53_BlogTechTest.Data;
 using Degree53_BlogTechTest.Data.Interfaces;
-using Degree53_BlogTechTest.Data.Models;
 using Degree53_BlogTechTest.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace Degree53_BlogTechTest
 {
@@ -35,7 +36,7 @@ namespace Degree53_BlogTechTest
             services.AddControllersWithViews();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -46,6 +47,8 @@ namespace Degree53_BlogTechTest
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            loggerFactory.AddFile("Logs/Blog-{Date}.txt");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

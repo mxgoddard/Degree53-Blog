@@ -20,4 +20,4 @@ Create a .NET Core C# solution for a simple blog.
 
 ### Database
 
-Database name is 'db_degree53-blog'. Ordinarily the appsettings.json would be on the .gitignore file or the connection strings hidden.
+Database name is 'db_degree53-blog'. Ordinarily the appsettings.json would be on the .gitignore file or the connection strings hidden. Running the application seeds the database.

@@ -3,6 +3,16 @@
 }
 
 .SettingsSaveBtn {
-    margin-top: 20px;
-    padding: 5px;
+    margin-top: 30px;
+    padding: 8px;
+    border: solid 1px #189eff;
+    border-radius: 4px;
+    background-color: #2ca6ff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+
+#NoMarginButton {
+    margin-left: 0px;
 }

@@ -31,22 +31,22 @@ Create a .NET Core C# solution for a simple blog.
 * ~~Seed database on app start~~
 * ~~Read articles from database~~
 * Unit Tests
-* ~~Sticky footer~~                               
-* ~~Add settings page~~                                 
+* ~~Sticky footer~~
+* ~~Add settings page~~
 * ~~Form validation~~
-* Delete articles                                 
-* ~~Clicking article takes to article page~~         
-* ~~I'm an admin checkbox~~                             
+* Delete articles
+* ~~Clicking article takes to article page~~
+* ~~I'm an admin checkbox~~
 * ~~When article added route to the page for that article~~
-* Split out CSS classes
-* Web Design (CSS)                                     
-* If no articles appear show something               
-* Limit how many articles appear?                    
-* Try catches and add logging                       
-* Filter by time created                            
-* Split out controllers and repositories            
-* Seed automatically creates the db                  
-* Global exception handler                          
-* Conditional render Add button                    
-* Update favicon.ico
+* ~~Split out CSS classes~~
+* ~~Web Design (CSS)~~
+* If no articles appear show something
+* Limit how many articles appear?
+* Try catches and add logging
+* Filter by time created
+* Split out controllers and repositories
+* Seed automatically creates the db
+* Global exception handler
+* Conditional render Add button
 * Make responsive
+* 404 Page

@@ -54,7 +54,7 @@ namespace Degree53_BlogTechTest.Controllers
             _logger.LogInformation($"{article.Title}, {article.Content}.");
             this._blogRepo.CreateArticle(article);
 
-            return View(article);
+            return Redirect($"/Home/Article/{article.Id}");
         }
     }
 }

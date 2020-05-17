@@ -1,5 +1,5 @@
 ﻿a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .border-top {
@@ -14,12 +14,15 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-  text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*margin: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;*/
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
 }
 
 .NavBarDiv ul {

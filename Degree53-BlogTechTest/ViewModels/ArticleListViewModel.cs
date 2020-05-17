@@ -5,7 +5,6 @@ namespace Degree53_BlogTechTest.ViewModels
 {
     public class ArticleListViewModel
     {
-        public string word { get; set; }
         public IEnumerable<ArticleModel> Articles { get; set; }
     }
 }

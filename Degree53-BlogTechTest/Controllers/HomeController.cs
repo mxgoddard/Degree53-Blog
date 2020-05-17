@@ -1,6 +1,10 @@
-﻿using Degree53_BlogTechTest.Data.Interfaces;
+﻿using System;
+using System.Threading.Tasks;
+using Degree53_BlogTechTest.Data.Interfaces;
+using Degree53_BlogTechTest.Data.Models;
 using Degree53_BlogTechTest.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 namespace Degree53_BlogTechTest.Controllers
@@ -16,13 +20,19 @@ namespace Degree53_BlogTechTest.Controllers
             _blogRepo = blogRepo;
         }
 
+        // Display all articles on the homepage
         public ViewResult Index()
         {
             ArticleListViewModel vm = new ArticleListViewModel();
             vm.Articles = _blogRepo.Articles;
-            vm.word = "Hello, World!";
 
             return View(vm);
+        }
+
+        public ViewResult Article()
+        {
+            // Create ViewModel for individual article
+            return View();
         }
 
         public ViewResult ListArticles()
@@ -30,9 +40,22 @@ namespace Degree53_BlogTechTest.Controllers
             return View();
         }
 
-        public IActionResult Add()
+        public ActionResult Add()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(ArticleModel article)
+        {
+            _logger.LogInformation($"{article.Title}, {article.Content}.");
+            this._blogRepo.CreateArticle(article);
+
+            // await this._blogRepo.CreateArticle(article);
+
+            // if (!ModelState.IsValid) return View(article);
+
+            return View(article);
         }
 
         public IActionResult Privacy()

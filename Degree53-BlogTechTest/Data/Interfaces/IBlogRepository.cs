@@ -8,5 +8,7 @@ namespace Degree53_BlogTechTest.Data.Interfaces
         public IEnumerable<ArticleModel> Articles { get; }
 
         public ArticleModel GetArticle(int articleId);
+
+        public ArticleModel CreateArticle(ArticleModel article);
     }
 }

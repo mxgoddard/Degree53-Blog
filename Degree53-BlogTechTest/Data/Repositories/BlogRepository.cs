@@ -18,5 +18,15 @@ namespace Degree53_BlogTechTest.Data.Repositories
         public IEnumerable<ArticleModel> Articles => this._appDbContext.Articles;
 
         public ArticleModel GetArticle(int articleId) => this._appDbContext.Articles.FirstOrDefault(a => a.Id == articleId);
+
+        public ArticleModel CreateArticle(ArticleModel article)
+        {
+            article.DateTimePosted = DateTime.UtcNow;
+
+            this._appDbContext.Articles.Add(article);
+            this._appDbContext.SaveChanges();
+
+            return article;
+        }
     }
 }

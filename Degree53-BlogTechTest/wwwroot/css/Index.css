@@ -1,0 +1,21 @@
+﻿.ArticlesWrapper {
+    background-color: #f0f0f0;
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+
+.ArticlesWrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.ArticleDiv {
+    background-color: white;
+    border: 1px solid #bababa;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 5px;
+}

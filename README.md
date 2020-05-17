@@ -33,11 +33,12 @@ Create a .NET Core C# solution for a simple blog.
 * Unit Tests
 * ~~Sticky footer~~                               
 * ~~Add settings page~~                                 
-* Form validation                                   
+* ~~Form validation~~
 * Delete articles                                 
 * ~~Clicking article takes to article page~~         
 * ~~I'm an admin checkbox~~                             
 * ~~When article added route to the page for that article~~
+* Split out CSS classes
 * Web Design (CSS)                                     
 * If no articles appear show something               
 * Limit how many articles appear?                    
@@ -47,4 +48,5 @@ Create a .NET Core C# solution for a simple blog.
 * Seed automatically creates the db                  
 * Global exception handler                          
 * Conditional render Add button                    
-* Update favicon.ico                                 
+* Update favicon.ico
+* Make responsive

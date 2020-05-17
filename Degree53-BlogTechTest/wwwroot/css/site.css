@@ -1,10 +1,26 @@
-﻿.PageContainerDiv {
+﻿.ContentWrapper {
+    padding-bottom: 2rem;
     position: relative;
-    min-height: 98vh;
+    min-height: 94vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2a2a2a;
 }
 
-.ContentWrapper {
-    padding-bottom: 2rem;
+.GeneralWrapper {
+    background-color: #f0f0f0;
+    padding-top: 5px;
+    min-height: 78vh;
+}
+
+.GeneralFocusArea {
+    border: 1px solid #bababa;
+    padding: 10px;
+    padding-left: 30px;
+    margin: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: white;
+    border-radius: 5px;
 }
 
 a {
@@ -36,7 +52,7 @@ a {
 
 .NavBarDiv li {
     display: inline;
-    padding: 0 5px 0 5px;
+    padding: 0 7px 0 7px;
 }
 
 .NavBarDiv a {
@@ -44,13 +60,13 @@ a {
     font-size: 20px;
 }
 
-
 .NavBarDiv a:hover {
     color: red;
 }
 
 .HeaderDiv {
     display: inline;
+    background-color: white;
 }
 
 .TitleDiv {
@@ -62,24 +78,4 @@ a {
 .TitleDiv a {
     text-decoration: none;
     color: black;
-}
-
-.ShowcaseArticleDiv {
-    border: 1px solid;
-    padding: 10px;
-    margin: 10px;
-}
-
-.LinkToArticleDiv a {
-    text-decoration: none;
-    color: black;
-}
-
-.SettingsPageDiv {
-    text-align: center;
-}
-
-.SettingsSaveBtn {
-    margin-top: 20px;
-    padding: 5px;
 }

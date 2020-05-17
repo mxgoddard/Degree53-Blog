@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Degree 53 Bloggr</title>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Index.css" />
+    <link rel="stylesheet" href="~/css/Article.css" />
+    <link rel="stylesheet" href="~/css/Add.css" />
+    <link rel="stylesheet" href="~/css/Settings.css" />
 </head>
 <body>
-    <div class="PageContainerDiv">
+    <div>
         <div class="ContentWrapper">
             <header>
                 <nav class="border-bottom box-shadow">
@@ -22,14 +26,15 @@
                 </nav>
             </header>
             <div>
+            <div>
                 <main role="main">
                     @RenderBody()
                 </main>
             </div>
-        </div>
 
-        <div class="footer">
-            Degree 53 Blog Tech Test - Written by Max Goddard - 16/5/2020
+            <div class="footer">
+                Degree 53 Blog Tech Test - Written by Max Goddard - 16/5/2020
+            </div>
         </div>
     </div>
 

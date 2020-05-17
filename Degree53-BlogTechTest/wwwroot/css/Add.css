@@ -1,0 +1,26 @@
+﻿.CreateArticleTextInput {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2a2a2a;
+    width: 90%;
+    height: 30px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.CreateArticleTextInputTitle {
+    font-size: 20px;
+}
+
+.CreateArticleContent {
+    height: 100px;
+}
+
+#CreateArticleButton {
+    margin: 10px;
+}
+
+#CreateArticleTitle {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2a2a2a;
+    margin: 20px 10px 10px 10px;
+}

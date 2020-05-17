@@ -1,14 +1,13 @@
 ﻿@* Page for creating the article *@
 @model Degree53_BlogTechTest.Data.Models.ArticleModel
-<div>
-    <h2>Create Article</h2>
-    <form asp-controller="Home" asp-action="Add" method="post">
-        <input type="text" asp-for="Title" placeholder="What's the title of your blog?">
-        <br />
-        <input type="text" asp-for="Content" placeholder="Write your blog here.">
-        <br />
-        <input type="text" asp-for="OwnerUsername" placeholder="What's your name?">
-        <br />
-        <input type="submit" value="Create Article">
-    </form>
+<div class="GeneralWrapper">
+    <div class="GeneralFocusArea">
+        <h2 id="CreateArticleTitle">Create Article</h2>
+        <form asp-controller="Home" asp-action="Add" method="post">
+            <input type="text" asp-for="Title" class="CreateArticleTextInput CreateArticleTextInputTitle" placeholder="What's the title of your blog?">
+            <textarea asp-for="Content" class="CreateArticleTextInput CreateArticleContent" placeholder="Write your blog here" class="CreateArticleTextInput"></textarea>
+            <input type="text" asp-for="OwnerUsername" class="CreateArticleTextInput" placeholder="What's your name? (optional)">
+            <input type="submit" id="CreateArticleButton" value="Create Article">
+        </form>
+    </div>
 </div>

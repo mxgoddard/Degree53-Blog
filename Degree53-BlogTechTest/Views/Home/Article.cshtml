@@ -1,14 +1,14 @@
 ﻿@* This is the page for a specific article. *@
 @model Degree53_BlogTechTest.Data.Models.ArticleModel
 
-<div>
+<div class="GeneralWrapper">
     @{
-        <div>
-            <h4>@Model.Title</h4>
+        <div class="GeneralFocusArea">
+            <p id="ArticleTitle">@Model.Title</p>
             <p>@Model.Content</p>
 
             <form asp-controller="Home" asp-action="DeleteArticle" method="delete">
-                <input type="submit" value="Delete Article">
+                <input type="submit" id="DeleteBtn" value="Delete Article">
             </form>
         </div>
     }

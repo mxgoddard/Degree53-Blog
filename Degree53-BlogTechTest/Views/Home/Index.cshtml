@@ -1,15 +1,17 @@
 ﻿@* This is the homepage where all the articles are shown. *@
 
-    <div class="LinkToArticleDiv">
-        @{
-            foreach (var article in Model.Articles)
-            {
+<div class="ArticlesWrapper">
+    @{
+        foreach (var article in Model.Articles)
+        {
+            <div class="ArticleDiv">
                 <a href="/Home/Article/@article.Id">
-                    <div class="ShowcaseArticleDiv">
+                    <div>
                         <h4>@article.Title</h4>
                         <p>Posted by @article.OwnerUsername at @article.DateTimePosted.ToString()</p>
                     </div>
                 </a>
-            }
+        </div>
         }
-    </div>
+    }
+</div>

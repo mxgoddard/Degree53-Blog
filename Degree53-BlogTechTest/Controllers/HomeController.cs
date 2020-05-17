@@ -56,7 +56,11 @@ namespace Degree53_BlogTechTest.Controllers
         {
             if (ModelState.IsValid)
             {
-                _logger.LogInformation($"{article.Title}, {article.Content}.");
+                if (String.IsNullOrWhiteSpace(article.OwnerUsername))
+                {
+                    article.OwnerUsername = "Anonymous";
+                }
+
                 this._blogRepo.CreateArticle(article);
 
                 return Redirect($"/Home/Article/{article.Id}");

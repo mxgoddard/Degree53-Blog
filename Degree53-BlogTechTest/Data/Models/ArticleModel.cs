@@ -16,7 +16,6 @@ namespace Degree53_BlogTechTest.Data.Models
 
         public DateTime DateTimePosted { get; set; }
 
-        [Required]
         public string OwnerUsername { get; set; }
     }
 }

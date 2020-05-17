@@ -22,7 +22,7 @@ Create a .NET Core C# solution for a simple blog.
 
 * Database name is 'db_degree53-blog'.
 * Running the application seeds the database.
-* The Admin has an id of 1 in the User table however admin permissions will need to be enabled in the settings.
+* The Admin has an id of 1 in the User table however admin permissions will need to be enabled in the settings page on the site.
 
 ### TODO
 
@@ -30,6 +30,7 @@ Create a .NET Core C# solution for a simple blog.
 * ~~Integrate Database (SQL Server Express LocalDB)~~
 * ~~Seed database on app start~~
 * ~~Read articles from database~~
+* ~~Create new articles~~
 * Delete articles
 * Unit Tests
 * ~~Sticky footer~~

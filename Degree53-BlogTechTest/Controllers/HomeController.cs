@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Degree53_BlogTechTest.Data.Interfaces;
 using Degree53_BlogTechTest.Data.Models;
 using Degree53_BlogTechTest.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 namespace Degree53_BlogTechTest.Controllers
@@ -32,20 +30,6 @@ namespace Degree53_BlogTechTest.Controllers
             return View(vm);
         }
 
-        // Show a specific article referenced by the article id
-        public ViewResult Article(int id)
-        {
-            // Validation needed here that id is valid
-            ArticleModel article = _blogRepo.GetArticle(id);
-
-            return View(article);
-        }
-
-        public ViewResult ListArticles()
-        {
-            return View();
-        }
-
         public ActionResult Add()
         {
             return View();
@@ -63,7 +47,7 @@ namespace Degree53_BlogTechTest.Controllers
 
                 this._blogRepo.CreateArticle(article);
 
-                return Redirect($"/Home/Article/{article.Id}");
+                return Redirect($"/Article/Article/{article.Id}");
             }
 
             return View(article);

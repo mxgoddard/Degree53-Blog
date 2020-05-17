@@ -13,6 +13,6 @@
     font-weight: bolder;
 }
 
-#NoMarginButton {
+.NoMarginButton {
     margin-left: 0px;
 }

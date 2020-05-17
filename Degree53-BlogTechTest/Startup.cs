@@ -33,7 +33,7 @@ namespace Degree53_BlogTechTest
                 options.UseSqlServer(_configurationRoot.GetConnectionString("MvcBlogContext")));
 
             services.AddTransient<IBlogRepository, BlogRepository>();
-            services.AddControllersWithViews();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
@@ -53,16 +53,9 @@ namespace Degree53_BlogTechTest
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

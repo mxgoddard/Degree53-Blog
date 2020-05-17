@@ -1,4 +1,6 @@
-﻿.ArticlesWrapper {
+﻿/* Home Index */
+
+.ArticlesWrapper {
     background-color: #f0f0f0;
     padding-top: 5px;
     padding-bottom: 25px;
@@ -18,4 +20,26 @@
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 5px;
+}
+
+/* Checklist Index */
+.Checklist li {
+    font-size: 18px;
+    list-style: none;
+}
+
+.Checklist {
+    padding-left: 1px;
+}
+
+#ChecklistTitle {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#ChecklistDisclaimer {
+    font-size: 14px;
+    color: #555555;
+    padding-top: 0;
+    margin-top: 0;
 }

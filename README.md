@@ -26,26 +26,27 @@ Create a .NET Core C# solution for a simple blog.
 
 ### TODO
 
-* ~~Setup basic app~~
-* ~~Integrate Database (SQL Server Express LocalDB)~~
-* ~~Seed database on app start~~
-* ~~Read articles from database~~
-* ~~Create new articles~~
-* Delete articles
-* Unit Tests
-* ~~Sticky footer~~
-* ~~Add settings page~~
-* ~~Form validation~~
-* ~~Clicking article takes to article page~~
-* ~~I'm an admin checkbox~~
-* ~~When article added route to the page for that article~~
-* ~~Split out CSS classes~~
-* ~~Web Design (CSS)~~
-* ~~Error handling and logging~~
-* Filter by time created
-* ~~Split out controllers and repositories~~
-* Seed automatically creates the db
-* Global exception handler
-* Conditional render Add button
-* Make responsive
-* 404 Page
+~~Setup basic app~~
+~~Integrate Database (SQL Server Express LocalDB)~~
+~~Seed database on app start~~
+~~Read articles from database~~
+~~Create new articles~~
+~~Clicking article takes to article page~~
+Conditionally render Add button
+Delete articles
+Unit Tests
+Error handling and logging
+~~Sticky footer~~
+~~Add settings page~~
+~~Form validation~~
+~~I'm an admin checkbox~~
+~~When article added route to the page for that article~~
+~~Split out CSS classes~~
+~~Basic web design (CSS)~~
+~~Filter by time created
+~~Split out controllers~~
+Split out repositories
+Seed automatically creates the db
+Global exception handler
+Make responsive
+404 Page

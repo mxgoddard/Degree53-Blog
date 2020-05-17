@@ -56,5 +56,11 @@ namespace Degree53_BlogTechTest.Controllers
 
             return Redirect($"/Home/Article/{article.Id}");
         }
+
+        [HttpDelete]
+        public IActionResult DeleteArticle()
+        {
+            return Redirect($"/Home");
+        }
     }
 }

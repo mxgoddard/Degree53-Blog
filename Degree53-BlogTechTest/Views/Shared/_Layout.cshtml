@@ -7,35 +7,39 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="border-bottom box-shadow">
-            <div class="HeaderDiv">
-                <div class="border-bottom box-shadow TitleDiv">
-                    <a href="/Home" class="BrandLink">
-                        <h1>Bloggr</h1>
-                    </a>
-                </div>
-                <div class="NavBarDiv">
-                    <ul>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Add">Add</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="PageContainerDiv">
+        <div class="ContentWrapper">
+            <header>
+                <nav class="border-bottom box-shadow">
+                    <div class="HeaderDiv">
+                        <div class="border-bottom box-shadow TitleDiv">
+                            <a href="/Home" class="BrandLink">
+                                <h1>Bloggr</h1>
+                            </a>
+                        </div>
+                        <div class="NavBarDiv">
+                            <ul>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Add">Add</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div>
+                <main role="main">
+                    @RenderBody()
+                </main>
             </div>
-        </nav>
-    </header>
-    <div>
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
+        </div>
 
-    <div class="footer">
-        Degree 53 Blog Tech Test - Written by Max Goddard - 16/5/2020
+        <div class="footer">
+            Degree 53 Blog Tech Test - Written by Max Goddard - 16/5/2020
+        </div>
     </div>
 
     @RenderSection("Scripts", required: false)

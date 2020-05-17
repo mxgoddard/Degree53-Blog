@@ -6,6 +6,10 @@
         <div>
             <h4>@Model.Title</h4>
             <p>@Model.Content</p>
+
+            <form asp-controller="Home" asp-action="DeleteArticle" method="delete">
+                <input type="submit" value="Delete Article">
+            </form>
         </div>
     }
 </div>

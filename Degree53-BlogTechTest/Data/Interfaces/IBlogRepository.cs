@@ -14,5 +14,7 @@ namespace Degree53_BlogTechTest.Data.Interfaces
         public void UpdateSettings(UserModel user);
 
         public UserModel GetUser();
+
+        public void DeleteArticle(int articleId);
     }
 }

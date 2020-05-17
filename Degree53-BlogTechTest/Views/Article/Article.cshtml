@@ -8,7 +8,7 @@
             <p id="ArticleMeta">Posted by @Model.OwnerUsername on @(Model.DateTimePosted.ToString("dddd, dd MMMM yyyy"))</p>
             <p id="ArticleContent">@Model.Content</p>
 
-            <form asp-controller="Article" asp-action="DeleteArticle" method="delete">
+            <form asp-controller="Article" asp-action="DeleteArticle" asp-route-id="@Model.Id" method="post">
                 <input type="submit" class="BlueBtn NoMarginButton" value="Delete Article">
             </form>
         </div>

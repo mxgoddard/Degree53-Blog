@@ -56,10 +56,12 @@ namespace Degree53_BlogTechTest.Controllers
             return View(article);
         }
 
-        [HttpDelete]
-        public IActionResult DeleteArticle()
+        // Can't get HttpDelete to work for some reason
+        [HttpPost]
+        public IActionResult DeleteArticle(ArticleModel article)
         {
-            return Redirect($"");
+            this._blogRepo.DeleteArticle(article.Id);
+            return Redirect($"/Home");
         }
     }
 }

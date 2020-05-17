@@ -73,5 +73,20 @@ namespace Degree53_BlogTechTest.Data.Repositories
                 return new UserModel { IsAdmin = false };
             }
         }
+
+        public void DeleteArticle(int articleId)
+        {
+            try
+            {
+                this._appDbContext.Remove(this._appDbContext.Articles.Find(articleId));
+                this._appDbContext.SaveChanges();
+
+                _logger.LogInformation($"{DateTime.Now}: Successfully removed article with Id of {articleId} from the database.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{DateTime.Now}: Unable to remove article with id of {articleId} from database. Error: {ex.Message}");
+            }
+        }
     }
 }

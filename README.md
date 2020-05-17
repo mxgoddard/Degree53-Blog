@@ -26,7 +26,7 @@ Create a .NET Core C# solution for a simple blog.
 
 ### TODO
 
-* Setup basic app                                       [x]
+* ~~Setup basic app~~                                   [x]
 * Integrate Database (SQL Server Express LocalDB)       [x]
 * Seed database on app start                            [x]
 * Read articles from database                           [x]

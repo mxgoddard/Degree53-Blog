@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Degree53_BlogTechTest.ViewModels;
 
 namespace Degree53_BlogTechTest.Data.Models
@@ -7,12 +8,15 @@ namespace Degree53_BlogTechTest.Data.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public string Title { get; set; }
 
+        [Required]
         public string Content { get; set; }
 
         public DateTime DateTimePosted { get; set; }
 
+        [Required]
         public string OwnerUsername { get; set; }
     }
 }

@@ -54,10 +54,15 @@ namespace Degree53_BlogTechTest.Controllers
         [HttpPost]
         public IActionResult Add(ArticleModel article)
         {
-            _logger.LogInformation($"{article.Title}, {article.Content}.");
-            this._blogRepo.CreateArticle(article);
+            if (ModelState.IsValid)
+            {
+                _logger.LogInformation($"{article.Title}, {article.Content}.");
+                this._blogRepo.CreateArticle(article);
 
-            return Redirect($"/Home/Article/{article.Id}");
+                return Redirect($"/Home/Article/{article.Id}");
+            }
+
+            return View(article);
         }
 
         public ViewResult Settings()

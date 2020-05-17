@@ -6,6 +6,8 @@ namespace Degree53_BlogTechTest.Data.Models
 {
     public class DbInitializer
     {
+        private readonly static string loremContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel facilisis nisi. Cras pellentesque elit at vehicula mollis. Nulla quis massa euismod, auctor nulla non, imperdiet sem. In sit amet posuere urna. Mauris purus libero, varius vitae pulvinar at, mattis ac ex. Integer quis erat lorem. Proin velit arcu, iaculis sit amet est sed, pretium mattis ante. Nunc sed tellus non turpis imperdiet vestibulum. Nullam diam felis, varius eu dolor et, vestibulum tristique diam. Aliquam vel libero ac lectus dignissim pellentesque. Duis ac sem pellentesque, condimentum ipsum a, semper mi. Nullam vel mi eleifend risus faucibus mattis ut sed mi. Integer eu est a arcu placerat maximus eget eu libero. Nam ultricies purus sit amet ipsum vulputate facilisis. Suspendisse potenti. Mauris ut vulputate ex. Morbi quis viverra risus. Praesent id sem tempus, commodo turpis sit amet, lobortis nibh. Mauris consequat feugiat nibh. Donec nec massa egestas, porttitor diam ut, venenatis lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vestibulum lacinia quam ut tincidunt. In mollis suscipit ornare. In a molestie neque, quis efficitur neque. Suspendisse efficitur nunc nec arcu tincidunt volutpat.";
+
         // Seed database
         public static void Seed(AppDbContext context)
         {
@@ -35,7 +37,7 @@ namespace Degree53_BlogTechTest.Data.Models
                     new ArticleModel
                     {
                         Title = "Wow this is an article!",
-                        Content = "This is some content.",
+                        Content = loremContent,
                         DateTimePosted = DateTime.UtcNow,
                         OwnerUsername = "Dave"
                     },

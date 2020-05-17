@@ -1,4 +1,19 @@
 ﻿#ArticleTitle {
     font-size: 18px;
     font-weight: bolder;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#ArticleContent {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#ArticleMeta {
+    font-size: 14px;
+    color: #646464;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
 }

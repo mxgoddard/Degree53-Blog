@@ -51,7 +51,7 @@ Should work straight out the box provided the ASP.NET workload and SQL Server Ex
 * Filter by time created
 * ~~Split out controllers~~
 * Split out repositories
-* Seed automatically creates the db
+* ~~Seed automatically creates the db~~
 * Global exception handler
 * 404 Page
 * Better user feedback

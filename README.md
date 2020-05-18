@@ -36,7 +36,7 @@ Create a .NET Core C# solution for a simple blog.
 * ~~Delete articles~~
 * ~~Unit Tests~~
 * More meaningful unit tests
-* Error handling and logging
+* ~~Error handling and logging~~
 * ~~Sticky footer~~
 * ~~Add settings page~~
 * ~~Form validation~~
@@ -49,6 +49,5 @@ Create a .NET Core C# solution for a simple blog.
 * Split out repositories
 * Seed automatically creates the db
 * Global exception handler
-* Make responsive
 * 404 Page
 * Better user feedback

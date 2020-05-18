@@ -34,7 +34,8 @@ Create a .NET Core C# solution for a simple blog.
 * ~~Clicking article takes to article page~~
 * Conditionally render Add button
 * ~~Delete articles~~
-* Unit Tests
+* ~~Unit Tests~~
+* More meaningful unit tests
 * Error handling and logging
 * ~~Sticky footer~~
 * ~~Add settings page~~

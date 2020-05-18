@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Degree53_BlogTechTest.Data.Interfaces;
 using Degree53_BlogTechTest.Data.Models;
 using Degree53_BlogTechTest.ViewModels;
@@ -21,11 +22,18 @@ namespace Degree53_BlogTechTest.Controllers
         // Display all articles on the homepage
         public ViewResult Index()
         {
-            ArticleListViewModel vm = new ArticleListViewModel()
+            ArticleListViewModel vm = new ArticleListViewModel();
+
+            try
             {
-                Articles = _blogRepo.Articles,
-                IsAdmin = _blogRepo.GetUser().IsAdmin
-            };
+                vm.Articles = _blogRepo.Articles;
+                // vm.IsAdmin = _blogRepo.GetUser().IsAdmin;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{DateTime.Now}: Unable to retrieve articles from database. Consider checking your db connection string. Error: {ex.Message}");
+                vm.Articles = new List<ArticleModel>();
+            }
 
             return View(vm);
         }

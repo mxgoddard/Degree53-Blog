@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Degree53-BlogTechTest", "Degree53-BlogTechTest\Degree53-BlogTechTest.csproj", "{CB124DC2-1FC8-401E-89E3-8A7D43CC8CEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Degree53-BlogTechTest", "Degree53-BlogTechTest\Degree53-BlogTechTest.csproj", "{CB124DC2-1FC8-401E-89E3-8A7D43CC8CEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Degree53-BlogTechTest.Tests", "Degree53-BlogTechTest.Tests\Degree53-BlogTechTest.Tests.csproj", "{743F870B-C3C7-4C83-9527-7DC547B56B2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CB124DC2-1FC8-401E-89E3-8A7D43CC8CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB124DC2-1FC8-401E-89E3-8A7D43CC8CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB124DC2-1FC8-401E-89E3-8A7D43CC8CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743F870B-C3C7-4C83-9527-7DC547B56B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743F870B-C3C7-4C83-9527-7DC547B56B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743F870B-C3C7-4C83-9527-7DC547B56B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743F870B-C3C7-4C83-9527-7DC547B56B2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

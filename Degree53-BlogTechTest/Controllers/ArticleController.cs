@@ -60,7 +60,11 @@ namespace Degree53_BlogTechTest.Controllers
         [HttpPost]
         public IActionResult DeleteArticle(ArticleModel article)
         {
-            this._blogRepo.DeleteArticle(article.Id);
+            if (article.Id > 0)
+            {
+                this._blogRepo.DeleteArticle(article.Id);
+            }
+            
             return Redirect($"/Home");
         }
     }

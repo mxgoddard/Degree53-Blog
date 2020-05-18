@@ -54,6 +54,27 @@ namespace Degree53_BlogTechTest.Data.Models
                         Content = "Even more content.",
                         DateTimePosted = DateTime.UtcNow,
                         OwnerUsername = "Bob"
+                    },
+                    new ArticleModel
+                    {
+                        Title = "CSS? Never heard of it.",
+                        Content = "This content isn't the most creative.",
+                        DateTimePosted = DateTime.UtcNow,
+                        OwnerUsername = "Susan"
+                    },
+                    new ArticleModel
+                    {
+                        Title = "C# > C++",
+                        Content = "These are my reasons to why C# is better than it's lower level counterpart, C++.",
+                        DateTimePosted = DateTime.UtcNow,
+                        OwnerUsername = "Jeffrey"
+                    },
+                    new ArticleModel
+                    {
+                        Title = "First post on Bloggr",
+                        Content = "Hi everyone, this is my first post on Bloggr!",
+                        DateTimePosted = DateTime.UtcNow,
+                        OwnerUsername = "Newbie"
                     }
                 );
             }

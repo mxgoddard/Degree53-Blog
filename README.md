@@ -2,6 +2,10 @@
 
 Create a .NET Core C# solution for a simple blog.
 
+## Notes
+
+Should work straight out the box provided the ASP.NET workload and SQL Server Express LocalDB (in the ASP.NET workload) are installed. Database seeding is done automatically.
+
 ### Requirements
 
 * The application must be a .Net Core MVC solution.
